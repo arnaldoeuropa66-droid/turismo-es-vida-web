@@ -43,18 +43,18 @@ function json(body, status = 200) {
 
 /* ---------- límite de peticiones por IP (KV, no Map en memoria) ---------- */
 async function rateLimited(env, ip) {
-  if (!env.Ratelimit) return false;
+  if (!env.RATELIMIT) return false;
   const key = 'rl:' + ip;
   let count = 0;
   try {
-    count = Number((await env.Ratelimit.get(key, 'text')) || 0);
+    count = Number((await env.RATELIMIT.get(key, 'text')) || 0);
   } catch (err) {
     console.error('rate limit read failed:', err && err.message);
     return false;
   }
   if (count >= MAX_PER_WINDOW) return true;
   try {
-    await env.Ratelimit.put(key, String(count + 1), { expirationTtl: KV_TTL });
+    await env.RATELIMIT.put(key, String(count + 1), { expirationTtl: KV_TTL });
   } catch (err) {
     console.error('rate limit write failed:', err && err.message);
   }
@@ -116,7 +116,7 @@ Tono de ejemplo:
 
 
 function guardarLeadSafe(env, lead) {
-  if (!env.AgenteLeads) {
+  if (!env.AGENTE_LEADS) {
     console.error('D1 AGENTE_LEADS no esta enlazado');
     return null;
   }
@@ -198,14 +198,14 @@ export default {
 
 /** El panel exige un token que es una credencial: misma respuesta siempre. */
 function panelAuthorized(request, env, url) {
-  if (!env.PanelToken) return false;
+  if (!env.PANEL_TOKEN) return false;
   const given = url.searchParams.get('token') || '';
   if (!given) return false;
   // Comparacion de longitud constante para no filtrar por temporizacion
-  if (given.length !== env.PanelToken.length) return false;
+  if (given.length !== env.PANEL_TOKEN.length) return false;
   let diff = 0;
   for (let i = 0; i < given.length; i++) {
-    diff |= given.charCodeAt(i) ^ env.PanelToken.charCodeAt(i);
+    diff |= given.charCodeAt(i) ^ env.PANEL_TOKEN.charCodeAt(i);
   }
   return diff === 0;
 }
@@ -224,8 +224,8 @@ function csvCampo(s) {
 }
 
 async function leadsRows(env) {
-  if (!env.AgenteLeads) return [];
-  const { results } = await env.AgenteLeads.prepare(
+  if (!env.AGENTE_LEADS) return [];
+  const { results } = await env.AGENTE_LEADS.prepare(
     'SELECT id, created_at, nombre, email, mensaje, conversacion FROM leads ORDER BY id DESC LIMIT 500'
   ).all();
   return results || [];
@@ -266,7 +266,7 @@ async function handleLeads(request, env, url) {
 
   // --- ver ---
   if (url.pathname === '/leads') {
-    if (!env.PanelToken) {
+    if (!env.PANEL_TOKEN) {
       return new Response('Panel sin configurar.', { status: 503 });
     }
     if (!panelAuthorized(request, env, url)) {
@@ -304,7 +304,7 @@ async function handleLeads(request, env, url) {
 
   // --- CSV ---
   if (url.pathname === '/leads.csv') {
-    if (!env.PanelToken) return new Response('Panel sin configurar.', { status: 503 });
+    if (!env.PANEL_TOKEN) return new Response('Panel sin configurar.', { status: 503 });
     if (!panelAuthorized(request, env, url)) {
       return new Response('Sin acceso.', { status: 401 });
     }

@@ -279,7 +279,7 @@
       // texto, asi que los escapes se interpretan dos veces: hay que
       // duplicarlos. Con un solo backslash, el \\\\s desaparecia y el punto se
       // quedaba sin escapar (cualquier caracter).
-      if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) {
+     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         return sayLead('Revisa el email, parece incompleto.', false);
       }
       if (mensaje.length < 3) return sayLead('Cuenta un poco qué necesitas.', false);
