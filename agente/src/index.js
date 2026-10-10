@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Agente de chat con IA para cualquier web.
  * Workers AI (gratis) + conversación con memoria corta + captura de contactos.
  *
@@ -20,6 +20,8 @@
  */
 
 import { validarLead, guardarLead, panelHtml } from './leads.js';
+import WIDGET_CSS from './widget.css';
+import WIDGET_JS from './widget.txt?raw';
 
 const DEFAULT_MODEL = '@cf/meta/llama-3.3-70b-instruct-fp8-fast';
 const MAX_TURNS = 12;

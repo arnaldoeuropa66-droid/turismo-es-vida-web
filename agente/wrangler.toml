@@ -1,30 +1,35 @@
-# Agente IA universal para cualquier web.
-# Despliegue: `npx wrangler deploy` (requiere un dominio y los IDs de infraestructura):
-#   - un namespace KV para el ratelimit (binding `RATELIMIT`)
-#   - una base D1 "AGENTE_LEADS" para los contactos (binding `AGENTE_LEADS`)
-# Los IDs de esas instancias se ponen en las secciones `[[kv_namespaces]]` y
-# `[[d1_databases]]` (o se dejan en .dev.vars y se enlazan con la CLI wrangler).
-
-name = "agente-ia-universal"
+# Agente IA para Turismo es Vida SAS
+name = "turismo-es-vida-agente"
 main = "src/index.js"
 compatibility_date = "2025-01-01"
 
-[[ai]]
+# Workers AI
+[ai]
 binding = "IA"
 
-# Limite de peticiones por IP (Workers KV, no un Map en memoria).
+# Variables de entorno del Worker
+[vars]
+MODELO = "@cf/meta/llama-3.1-8b-instruct-awq"
+
+# Limite de peticiones por IP (Workers KV)
 [[kv_namespaces]]
 binding = "RATELIMIT"
-id = ""   # <-- poner el id del namespace KV creado en Cloudflare
+id = "d387c27b55144c30a035b91a4a10d5ad"
 
-# Contactos que deja el visitante en el chat.
+# Contactos del chat
 [[d1_databases]]
 binding = "AGENTE_LEADS"
-database_name = "AGENTE_LEADS"
-database_id = ""   # <-- poner el id de la base D1 creada en Cloudflare
+database_name = "turismo-es-vida-leads"
+database_id = "95235b26-2b3d-4f1a-8e8f-14c01892f11e"
 
-# El CSS del widget se sirve como texto y se incrusta en widget.js: un solo <script>.
+# El CSS del widget se sirve como texto
 [[rules]]
 type = "Text"
 globs = ["**/*.css"]
+fallthrough = true
+
+# El JS del widget se sirve como texto plano
+[[rules]]
+type = "Text"
+globs = ["**/*.txt"]
 fallthrough = true

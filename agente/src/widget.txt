@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Widget que se incrusta en cualquier web.
  * Se sirve como texto plano desde el Worker; todo el JS de cliente usa
  * concatenación en vez de plantillas (para no chocar con los acentos graves).
@@ -10,7 +10,7 @@
  * Ruta base: la que define window.TURISMOESVIDA_API.
  */
 
-export default `(function () {
+(function () {
   'use strict';
 
   if (window.__turismoesvidaAgente) return;
@@ -28,7 +28,7 @@ export default `(function () {
   var root = document.createElement('div');
   root.className = 'eb-agent';
   root.innerHTML =
-    '<button class="eb-agent__fab" type="button" aria-label="Abrir el chat de Turismo es Vida" aria-expanded="false">' +
+   '<button class="eb-agent__fab" type="button" aria-label="Abrir el chat de Turismo es Vida" aria-expanded="false">' +
       '<span class="eb-agent__fab-dot"></span>' +
       '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">' +
         '<path d="M20 4H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3v4l4.5-4H20a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1Z" ' +
@@ -36,7 +36,7 @@ export default `(function () {
       '</svg>' +
     '</button>' +
 
-    '<section class="eb-agent__panel" role="dialog" aria-label="Chat con Turismo es Vida" aria-hidden="true">' +
+   '<section class="eb-agent__panel" role="dialog" aria-label="Chat con Turismo es Vida" aria-hidden="true">' +
       '<header class="eb-agent__head">' +
         '<div class="eb-agent__id">' +
           '<span class="eb-agent__avatar">TV</span>' +
@@ -52,7 +52,7 @@ export default `(function () {
 
       '<div class="eb-agent__actions">' +
         '<button class="eb-agent__mail" type="button">Email</button>' +
-        '<a class="eb-agent__mail eb-agent__wa" href="https://wa.me/34600385615" target="_blank" rel="noopener">WhatsApp</a>' +
+        '<a class="eb-agent__mail eb-agent__wa" href="https://wa.me/573183981089" target="_blank" rel="noopener">WhatsApp</a>' +
         '<button class="eb-agent__lead-open" type="button">Dejar contacto</button>' +
       '</div>' +
 
@@ -327,13 +327,13 @@ export default `(function () {
     return lines.join('\\n\\n---\\n\\n');
   }
 
-  function byEmail() {
+    function byEmail() {
     var subject = 'Consulta desde turismoesvida.com';
     var body =
       'Hola equipo de Turismo es Vida,\n\n' +
       'Te escribo desde el chat de la web:\n\n' +
       transcript() +
-      '\n\n---' +
+      '\n\n---\n' +
       'Enviado desde el chat de turismoesvida.com';
     window.location.href = 'mailto:' + MAIL + '?subject=' + encodeURIComponent(subject) +
       '&body=' + encodeURIComponent(body);
@@ -389,4 +389,4 @@ export default `(function () {
   mailBtn.disabled = true;
   window.__turismoesvidaAgente = true;
 })();
-`;
+
