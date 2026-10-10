@@ -1,0 +1,31 @@
+﻿# Dependencias
+node_modules/
+package-lock.json
+
+# Secretos (NUNCA subir)
+.dev.vars
+.env
+.env.local
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backups
+*.bak
+*.old
+
+# Build / cache
+.wrangler/
+dist/
+.cache/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editores
+.vscode/
+.idea/
+*.swp

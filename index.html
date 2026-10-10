@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Turismo es Vida SAS — Vive tu mejor versión</title>
+<meta name="description" content="Retiros holísticos, turismo de bienestar y experiencias auténticas en Cali, Colombia. Vive tu mejor versión." />
+<meta name="theme-color" content="#1F3D2B" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Turismo es Vida SAS — Vive tu mejor versión" />
+<meta property="og:description" content="Retiros holísticos, turismo de bienestar y experiencias auténticas en Cali, Colombia." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="es_CO" />
+
+<!-- hreflang -->
+<link rel="alternate" hreflang="es" href="https://turismoesvida.com/" />
+<link rel="alternate" hreflang="en" href="https://turismoesvida.com/en/" />
+<link rel="alternate" hreflang="x-default" href="https://turismoesvida.com/" />
+
+<!-- Tipografías -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Estilos -->
+<link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="header__logo" aria-label="Turismo es Vida, inicio">
+      <span class="header__logo-marca">TURISMO <em>ES VIDA</em></span>
+      <span class="header__logo-sas">SAS</span>
+    </a>
+    <nav class="header__nav" aria-label="Navegación principal">
+      <a href="#retiro">Retiro</a>
+      <a href="#medico">Medical Companion</a>
+      <a href="#experiencias">Experiencias</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="/en/" class="header__lang" hreflang="en" lang="en">EN</a>
+      <a href="#contacto" class="btn btn--primario header__cta">Reservar</a>
+    </nav>
+    <button class="header__burger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO 3D ============ -->
+<section class="hero" id="inicio">
+  <div class="hero__capa hero__capa--fondo" aria-hidden="true"></div>
+  <div class="hero__capa hero__capa--montanas" aria-hidden="true"></div>
+  <div class="hero__capa hero__capa--niebla" aria-hidden="true"></div>
+  <div class="hero__capa hero__capa--hojas" aria-hidden="true"></div>
+
+  <div class="hero__contenido">
+    <span class="hero__eyebrow">Cali · Valle del Cauca · Colombia</span>
+    <h1 class="hero__titulo">Detenerte también<br>es <em>avanzar</em></h1>
+    <p class="hero__subtitulo">
+      Retiros holísticos, turismo de bienestar y experiencias auténticas
+      en el corazón del Pacífico colombiano. Vive tu mejor versión.
+    </p>
+    <div class="hero__acciones">
+      <a href="#retiro" class="btn btn--primario">Reserva tu cupo</a>
+      <a href="#puertas" class="btn btn--fantasma">Descubre más</a>
+    </div>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true">Desliza</div>
+</section>
+
+<!-- ============ TRES PUERTAS ============ -->
+<section class="seccion" id="puertas">
+  <div class="contenedor">
+    <h2 class="centrado">¿Qué experiencia buscas hoy?</h2>
+    <p class="subtitulo centrado">
+      Tres caminos, una misma promesa: bienestar con propósito, naturaleza y cultura local.
+    </p>
+
+    <div class="puertas">
+      <article class="puerta">
+        <div class="puerta__icono" aria-hidden="true">🌿</div>
+        <h3>Retiro "Vuelve a ti"</h3>
+        <p>Seis horas en una reserva natural: purificación, cuencos tibetanos, círculo de fuego y cierre mindfulness. Cupos limitados.</p>
+        <a href="#retiro" class="puerta__link">Ver el retiro →</a>
+      </article>
+
+      <article class="puerta puerta--medico">
+        <div class="puerta__icono" aria-hidden="true">🤝</div>
+        <h3>Medical Companion</h3>
+        <p>Acompañamiento de bienestar para viajeros que se someten a procedimientos médicos en Colombia. Transporte, estancia y apoyo emocional.</p>
+        <a href="#medico" class="puerta__link">Conocer el servicio →</a>
+      </article>
+
+      <article class="puerta puerta--tours">
+        <div class="puerta__icono" aria-hidden="true">💃</div>
+        <h3>Experiencias en Cali</h3>
+        <p>Tours de salsa, sabores y cultura, Laguna de Sonso, Bosque de Niebla y celebraciones personalizadas.</p>
+        <a href="#experiencias" class="puerta__link">Explorar tours →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REEL 3D ============ -->
+<section class="reel" id="experiencias">
+  <div class="contenedor">
+    <h2 class="centrado">Momentos que se quedan</h2>
+    <p class="subtitulo centrado">Una muestra de lo que vivirás con nosotros</p>
+  </div>
+
+  <div class="reel__escenario">
+    <div class="reel__carrusel" id="reelCarrusel" role="region" aria-label="Carrusel de experiencias"></div>
+  </div>
+
+  <div class="reel__controles">
+    <button class="reel__btn" id="reelPrev" aria-label="Experiencia anterior">‹</button>
+    <button class="reel__btn" id="reelNext" aria-label="Siguiente experiencia">›</button>
+  </div>
+</section>
+
+<!-- ============ TIMELINE RETIRO ============ -->
+<section class="seccion seccion--suave" id="retiro">
+  <div class="contenedor">
+    <h2 class="centrado">El retiro, minuto a minuto</h2>
+    <p class="subtitulo centrado">
+      Seis horas diseñadas para que vuelvas a ti. Sin prisa, sin ruido, sin pantallas.
+    </p>
+
+    <div class="timeline">
+      <div class="timeline__item">
+        <h3>Purificación y baños de vapor</h3>
+        <p>Humo de hierbas locales y vapor para soltar lo que ya no necesitas cargar.</p>
+      </div>
+      <div class="timeline__item">
+        <h3>Cuencos tibetanos y meditación caminando</h3>
+        <p>El sonido como ancla. El paso como mantra. La naturaleza como maestra.</p>
+      </div>
+      <div class="timeline__item">
+        <h3>Ritual del árbol de la vida</h3>
+        <p>Escritura íntima para nombrar lo que quieres cultivar de aquí en adelante.</p>
+      </div>
+      <div class="timeline__item">
+        <h3>Círculo de fuego</h3>
+        <p>Compartir sin juicio, escuchar sin prisa. El fuego como testigo.</p>
+      </div>
+      <div class="timeline__item">
+        <h3>Almuerzo y refrigerio consciente</h3>
+        <p>Sabores locales preparados con intención. Comer también es un acto de presencia.</p>
+      </div>
+      <div class="timeline__item">
+        <h3>Jornada sonora y cierre mindfulness</h3>
+        <p>Integración final para volver al mundo con calma profunda y claridad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOQUE MÉDICO ============ -->
+<section class="seccion" id="medico">
+  <div class="contenedor">
+    <div class="medico">
+      <h2>Your recovery, accompanied</h2>
+      <p>
+        Wellness and emotional support for international travelers undergoing
+        medical procedures in Cali, Colombia. We coordinate, we accompany, we care.
+      </p>
+
+      <div class="medico__pasos">
+        <div class="medico__paso">
+          <span aria-hidden="true">01</span>
+          <h3>Assessment</h3>
+          <p>We listen to your needs and design a personalized support plan.</p>
+        </div>
+        <div class="medico__paso">
+          <span aria-hidden="true">02</span>
+          <h3>Planning</h3>
+          <p>Transportation, recovery housing and logistics coordinated end to end.</p>
+        </div>
+        <div class="medico__paso">
+          <span aria-hidden="true">03</span>
+          <h3>Stay</h3>
+          <p>Emotional and energetic support during your recovery in Cali.</p>
+        </div>
+        <div class="medico__paso">
+          <span aria-hidden="true">04</span>
+          <h3>Follow-up</h3>
+          <p>Virtual check-ins after you return home.</p>
+        </div>
+      </div>
+
+      <div class="medico__aviso">
+        <strong>Aviso importante:</strong> nuestros servicios son complementarios
+        de bienestar y acompañamiento. No sustituyen atención médica, diagnóstico
+        ni tratamiento. Consulte siempre a su médico tratante.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE NOSOTROS ============ -->
+<section class="seccion seccion--suave" id="nosotros">
+  <div class="contenedor contenedor--estrecho">
+    <h2 class="centrado">Sobre nosotros</h2>
+    <p class="subtitulo centrado">
+      Creamos experiencias de turismo de bienestar y propósito. Integramos
+      sabiduría ancestral, naturaleza, espiritualidad y cultura local.
+    </p>
+    <p class="centrado" style="color:var(--texto-suave);max-width:640px;margin:24px auto 0">
+      Turismo es Vida SAS opera desde Cali, Valle del Cauca, con registro
+      nacional de turismo <strong>RNT 265912</strong>. Trabajamos con comunidades
+      locales y rechazamos la explotación sexual de menores y el turismo sexual
+      (Ley 679 de 2001).
+    </p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="contacto">
+  <div class="contenedor">
+
+    <div class="footer__aviso-ia">
+      <span aria-hidden="true">🤖</span>
+      <div>
+        <strong>Aviso sobre el chat de esta página:</strong>
+        el asistente virtual que ves abajo funciona con <strong>inteligencia artificial</strong>.
+        Sus respuestas son orientativas y pueden contener imprecisiones. Para confirmar
+        precios, fechas, cupos o condiciones médicas, escríbenos por WhatsApp o correo.
+      </div>
+    </div>
+
+    <div class="footer__grid">
+      <div>
+        <h4>Turismo es Vida SAS</h4>
+        <p class="footer__desc">
+          Turismo de bienestar y salud en Cali, Colombia.<br>
+          RNT 265912 · Cali, Valle del Cauca.
+        </p>
+      </div>
+      <div>
+        <h4>Explora</h4>
+        <a href="#retiro">Retiro Vuelve a ti</a>
+        <a href="#medico">Medical Companion</a>
+        <a href="#experiencias">Experiencias</a>
+        <a href="#nosotros">Sobre nosotros</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <a href="https://wa.me/573183981089" rel="noopener">WhatsApp +57 318 398 1089</a>
+        <a href="mailto:turismoesvida@gmail.com">turismoesvida@gmail.com</a>
+        <a href="https://www.turismoesvida.com">www.turismoesvida.com</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="/privacidad">Política de privacidad</a>
+        <a href="/terminos">Términos del servicio</a>
+        <a href="/cancelaciones">Cancelaciones</a>
+      </div>
+    </div>
+
+    <div class="footer__legal">
+      <span>© 2026 Turismo es Vida SAS. Todos los derechos reservados.</span>
+      <span>Rechazamos la explotación sexual de menores y el turismo sexual (Ley 679/2001).</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ SCRIPT PRINCIPAL ============ -->
+<script src="/assets/js/main.js" defer></script>
+
+<!-- ============ WIDGET DEL AGENTE IA ============
+     Reemplaza TU-WORKER por el subdominio real cuando lo despliegues.
+     Ejemplo: turismo-es-vida-agente.tu-usuario.workers.dev
+-->
+<script>
+  window.TURISMOESVIDA_API = 'https://TU-WORKER.workers.dev';
+</script>
+<script src="https://TU-WORKER.workers.dev/widget.js" defer></script>
+
+</body>
+</html>
