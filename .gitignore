@@ -36,3 +36,10 @@ assets/img/*.psd
 assets/img/*.ai
 assets/img/*.tiff
 assets/img/*.raw
+
+# Imagenes sin optimizar / temporales
+assets/img/canvas*.png
+assets/img/*.psd
+assets/img/*.ai
+assets/img/*.tiff
+assets/img/*.raw
