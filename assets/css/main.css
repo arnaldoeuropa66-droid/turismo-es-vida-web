@@ -732,3 +732,66 @@ body.menu-abierto{
     transition: none;
   }
 }
+/* ============================================================
+   CONTADOR DE CUPOS
+   ============================================================ */
+
+.contador-cupos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto 48px;
+  padding: 28px 40px;
+  background: #fff;
+  border-radius: var(--radio-lg);
+  box-shadow: 0 10px 40px rgba(31,61,43,.08);
+  border-top: 4px solid var(--naranja-cta);
+  max-width: 420px;
+}
+
+.contador-cupos__numero {
+  font-family: var(--serif);
+  font-size: clamp(3rem, 8vw, 4.5rem);
+  font-weight: 700;
+  color: var(--naranja-cta);
+  line-height: 1;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.contador-cupos__texto {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--verde-selva);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.contador-cupos__aviso {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  font-style: italic;
+}
+
+/* En móvil, un poco más compacto */
+@media (max-width: 520px) {
+  .contador-cupos {
+    padding: 20px 24px;
+    margin-bottom: 32px;
+  }
+  .contador-cupos__texto {
+    font-size: 1rem;
+  }
+  .contador-cupos__aviso {
+    font-size: 0.78rem;
+  }
+}
+
+/* Respeto a prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .contador-cupos__numero {
+    transition: none;
+  }
+}

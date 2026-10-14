@@ -258,4 +258,40 @@
   } else if (puertas) {
     puertas.classList.add('visible');
   }
+    /* ============================================================
+     8. CONTADOR DE CUPOS ANIMADO
+     ============================================================ */
+
+  const contador = document.querySelector('.contador-cupos__numero');
+  if (contador && 'IntersectionObserver' in window) {
+    const objetivo = parseInt(contador.dataset.cupos, 10) || 12;
+    let yaAnimado = false;
+
+    const observerContador = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !yaAnimado) {
+          yaAnimado = true;
+          animarContador(contador, 0, objetivo, 1500);
+          observerContador.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    observerContador.observe(contador);
+  } else if (contador) {
+    contador.textContent = contador.dataset.cupos || '12';
+  }
+
+  function animarContador(el, desde, hasta, duracion) {
+    const inicio = performance.now();
+    function paso(ahora) {
+      const progreso = Math.min((ahora - inicio) / duracion, 1);
+      // easing suave (easeOutQuart)
+      const easing = 1 - Math.pow(1 - progreso, 4);
+      const valor = Math.round(desde + (hasta - desde) * easing);
+      el.textContent = valor;
+      if (progreso < 1) requestAnimationFrame(paso);
+    }
+    requestAnimationFrame(paso);
+  }
 })();
