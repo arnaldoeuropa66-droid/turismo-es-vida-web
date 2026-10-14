@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    Turismo es Vida SAS — Estilos principales
    Paleta: trópico andino
    ============================================================ */
@@ -419,13 +419,13 @@ h3{font-size:1.25rem;margin-bottom:.4em}
    ============================================================ */
 
 .header__logo-img {
-  height: 64px;
+  height: 80px;
   width: auto;
   display: block;
 }
 
 .hero__logo {
-  height: 140px;
+  height: 170px;
   width: auto;
   margin: 0 auto 24px;
   display: block;
@@ -444,7 +444,7 @@ h3{font-size:1.25rem;margin-bottom:.4em}
 }
 
 @media (max-width: 520px) {
-  .header__logo-img { height: 38px; }
-  .hero__logo { height: 80px; }
+  .header__logo-img { height: 48px; }
+  .hero__logo { height: 100px; }
   .legal__logo img { height: 56px; }
 }
