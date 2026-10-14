@@ -109,9 +109,113 @@ h3{font-size:1.25rem;margin-bottom:.4em}
 }
 
 @media(max-width:900px){
-  .header__nav{display:none}
-  .header__burger{display:flex}
+  /* El nav se oculta y se convierte en panel lateral */
+  .header__nav{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:80%;
+    max-width:340px;
+    height:100vh;
+    background:var(--crema);
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:flex-start;
+    gap:0;
+    padding:90px 28px 40px;
+    box-shadow:-10px 0 40px rgba(31,61,43,.15);
+    transition:right 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index:99;
+    overflow-y:auto;
+  }
+
+  .header__nav.abierto{
+    right:0;
+  }
+
+  .header__nav a{
+    width:100%;
+    padding:18px 0;
+    font-size:1.05rem;
+    border-bottom:1px solid rgba(31,61,43,.08);
+    color:var(--verde-selva);
+    font-weight:500;
+  }
+
+  .header__nav a:last-child{
+    border-bottom:none;
+  }
+
+  .header__nav a.header__lang{
+    width:auto;
+    padding:8px 14px;
+    border-bottom:none;
+    margin-top:20px;
+    border:1px solid rgba(31,61,43,.2);
+    border-radius:6px;
+  }
+
+  .header__nav a.header__cta{
+    width:100%;
+    text-align:center;
+    justify-content:center;
+    margin-top:24px;
+    padding:14px 20px;
+    color:#fff;
+    border-bottom:none;
+  }
+
+  .header__burger{
+    display:flex;
+    z-index:100;
+    position:relative;
+  }
+
+  .header__burger span{
+    transition:transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .header__burger.abierto span:nth-child(1){
+    transform:translateY(7px) rotate(45deg);
+  }
+
+  .header__burger.abierto span:nth-child(2){
+    opacity:0;
+  }
+
+  .header__burger.abierto span:nth-child(3){
+    transform:translateY(-7px) rotate(-45deg);
+  }
 }
+
+/* Overlay y bloqueo de scroll (fuera del media query para que existan siempre) */
+.menu-overlay{
+  position:fixed;
+  top:0;left:0;right:0;bottom:0;
+  background:rgba(20,32,26,.4);
+  backdrop-filter:blur(2px);
+  -webkit-backdrop-filter:blur(2px);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity 0.35s ease;
+  z-index:98;
+}
+
+.menu-overlay.visible{
+  opacity:1;
+  pointer-events:auto;
+}
+
+body.menu-abierto{
+  overflow:hidden;
+}
+
+@media(min-width:901px){
+  .menu-overlay{
+    display:none;
+  }
+}
+
 @media(max-width:520px){
   .header__logo-marca{font-size:.95rem}
 }

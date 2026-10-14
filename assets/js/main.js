@@ -100,26 +100,63 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
-  /* ============================================================
-     3. MENÚ MÓVIL
+   /* ============================================================
+     MENÚ MÓVIL
      ============================================================ */
+
   const burger = document.querySelector('.header__burger');
   const nav = document.querySelector('.header__nav');
+
   if (burger && nav) {
+    // Crear el overlay si no existe
+    let overlay = document.querySelector('.menu-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'menu-overlay';
+      document.body.appendChild(overlay);
+    }
+
+    function abrirMenu() {
+      nav.classList.add('abierto');
+      burger.classList.add('abierto');
+      burger.setAttribute('aria-expanded', 'true');
+      overlay.classList.add('visible');
+      document.body.classList.add('menu-abierto');
+    }
+
+    function cerrarMenu() {
+      nav.classList.remove('abierto');
+      burger.classList.remove('abierto');
+      burger.setAttribute('aria-expanded', 'false');
+      overlay.classList.remove('visible');
+      document.body.classList.remove('menu-abierto');
+    }
+
     burger.addEventListener('click', () => {
-      const abierto = burger.getAttribute('aria-expanded') === 'true';
-      burger.setAttribute('aria-expanded', abierto ? 'false' : 'true');
-      nav.style.display = abierto ? '' : 'flex';
-      if (!abierto) {
-        nav.style.position = 'absolute';
-        nav.style.top = '100%';
-        nav.style.left = '0';
-        nav.style.right = '0';
-        nav.style.flexDirection = 'column';
-        nav.style.background = 'var(--crema)';
-        nav.style.padding = '24px';
-        nav.style.gap = '18px';
-        nav.style.borderBottom = '1px solid rgba(31,61,43,.1)';
+      if (nav.classList.contains('abierto')) {
+        cerrarMenu();
+      } else {
+        abrirMenu();
+      }
+    });
+
+    overlay.addEventListener('click', cerrarMenu);
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 900) cerrarMenu();
+      });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('abierto')) {
+        cerrarMenu();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900 && nav.classList.contains('abierto')) {
+        cerrarMenu();
       }
     });
   }
