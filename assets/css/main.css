@@ -1000,3 +1000,45 @@ body.menu-abierto{
     transition: none;
   }
 }
+/* ============================================================
+   SELECTOR DE IDIOMA
+   ============================================================ */
+
+.header__idioma {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid rgba(31,61,43,.2);
+  border-radius: 8px;
+  padding: 2px;
+  background: rgba(255,248,236,.5);
+}
+
+.header__lang {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: var(--verde-hoja);
+  transition: background 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+}
+
+.header__lang:hover {
+  color: var(--naranja-cta);
+  text-decoration: none;
+}
+
+.header__lang.activo {
+  background: var(--verde-selva);
+  color: var(--crema);
+}
+
+/* En el menú móvil, el selector se ve como fila horizontal */
+@media (max-width: 900px) {
+  .header__idioma {
+    margin-top: 20px;
+    width: auto;
+  }
+}

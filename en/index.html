@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Turismo es Vida SAS — Live your best version</title>
+<meta name="description" content="Holistic retreats, wellness tourism and authentic experiences in Cali, Colombia. Live your best version." />
+<meta name="theme-color" content="#1F3D2B" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Turismo es Vida SAS — Live your best version" />
+<meta property="og:description" content="Holistic retreats, wellness tourism and authentic experiences in Cali, Colombia." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="es_CO" />
+
+<!-- hreflang -->
+<link rel="alternate" hreflang="es" href="https://turismo-es-vida-web.pages.dev/" />
+<link rel="alternate" hreflang="en" href="https://turismo-es-vida-web.pages.dev/en/" />
+<link rel="alternate" hreflang="x-default" href="https://turismo-es-vida-web.pages.dev/" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+  <div class="header__inner">
+    <a href="/en/" class="header__logo" aria-label="Turismo es Vida, home">
+      <img src="/assets/img/logo.webp" alt="Turismo es Vida SAS" class="header__logo-img">
+    </a>
+    <nav class="header__nav" aria-label="Main navigation">
+      <a href="#retreat">Retreat</a>
+      <a href="#medical">Medical Companion</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#about">About</a>
+      <div class="header__idioma">
+        <a href="/" class="header__lang" hreflang="es" lang="es">ES</a>
+        <a href="/en/" class="header__lang activo" hreflang="en" lang="en">EN</a>
+      </div>
+      <a href="#contact" class="btn btn--primario header__cta">Book now</a>
+    </nav>
+    <button class="header__burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO 3D ============ -->
+<section class="hero" id="home">
+  <div class="hero__capa hero__capa--fondo" aria-hidden="true"></div>
+  <div class="hero__capa hero__capa--montanas" aria-hidden="true"></div>
+  <div class="hero__capa hero__capa--niebla" aria-hidden="true"></div>
+  <div class="hero__capa hero__capa--hojas" aria-hidden="true"></div>
+
+  <div class="hero__contenido">
+    <img src="/assets/img/logo.webp" alt="Turismo es Vida SAS" class="hero__logo">
+    <span class="hero__eyebrow">Cali · Valle del Cauca · Colombia</span>
+    <h1 class="hero__titulo">Stopping is also<br><em>moving forward</em></h1>
+    <p class="hero__subtitulo">
+      Holistic retreats, wellness tourism and authentic experiences
+      in the heart of the Colombian Pacific. Live your best version.
+    </p>
+    <div class="hero__acciones">
+      <a href="#retreat" class="btn btn--primario">Book your spot</a>
+      <a href="#doors" class="btn btn--fantasma">Discover more</a>
+    </div>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true">Scroll</div>
+</section>
+
+<!-- ============ THREE DOORS ============ -->
+<section class="seccion" id="doors">
+  <div class="contenedor">
+    <h2 class="centrado">What experience are you looking for today?</h2>
+    <p class="subtitulo centrado">
+      Three paths, one same promise: wellness with purpose, nature and local culture.
+    </p>
+
+    <div class="puertas animar-puertas">
+      <article class="puerta puerta--izq">
+        <div class="puerta__icono" aria-hidden="true">🌿</div>
+        <h3>Retreat "Come back to you"</h3>
+        <p>Six hours in a nature reserve: purification, Tibetan bowls, fire circle and mindfulness closing. Limited spots.</p>
+        <a href="#retreat" class="puerta__link">See the retreat →</a>
+      </article>
+
+      <article class="puerta puerta--medico puerta--centro">
+        <div class="puerta__icono" aria-hidden="true">🤝</div>
+        <h3>Medical Companion</h3>
+        <p>Wellness support for travelers undergoing medical procedures in Colombia. Transportation, stay and emotional support.</p>
+        <a href="#medical" class="puerta__link">Discover the service →</a>
+      </article>
+
+      <article class="puerta puerta--tours puerta--der">
+        <div class="puerta__icono" aria-hidden="true">💃</div>
+        <h3>Experiences in Cali</h3>
+        <p>Salsa tours, flavors and culture, Sonso Lagoon, Cloud Forest and personalized celebrations.</p>
+        <a href="#experiences" class="puerta__link">Explore tours →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3D REEL ============ -->
+<section class="reel" id="experiences">
+  <div class="contenedor">
+    <h2 class="centrado">Moments that stay</h2>
+    <p class="subtitulo centrado">A glimpse of what you will live with us</p>
+  </div>
+
+  <div class="reel__escenario">
+    <div class="reel__carrusel" id="reelCarrusel" role="region" aria-label="Experiences carousel"></div>
+  </div>
+
+  <div class="reel__controles">
+    <button class="reel__btn" id="reelPrev" aria-label="Previous experience">‹</button>
+    <button class="reel__btn" id="reelNext" aria-label="Next experience">›</button>
+  </div>
+</section>
+
+<!-- ============ RETREAT TIMELINE ============ -->
+<section class="seccion seccion--suave" id="retreat">
+  <div class="contenedor">
+    <h2 class="centrado">The retreat, minute by minute</h2>
+    <p class="subtitulo centrado">
+      Six hours designed for you to come back to yourself. No rush, no noise, no screens.
+    </p>
+
+    <div class="contador-cupos">
+      <span class="contador-cupos__numero" data-cupos="12">0</span>
+      <span class="contador-cupos__texto">spots per edition</span>
+      <span class="contador-cupos__aviso">Reserve yours before they are gone</span>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline__item">
+        <h3>Purification and steam baths</h3>
+        <p>Local herb smoke and steam to release what you no longer need to carry.</p>
+      </div>
+      <div class="timeline__item">
+        <h3>Tibetan bowls and walking meditation</h3>
+        <p>Sound as an anchor. The step as a mantra. Nature as a teacher.</p>
+      </div>
+      <div class="timeline__item">
+        <h3>Tree of life ritual</h3>
+        <p>Intimate writing to name what you want to cultivate from now on.</p>
+      </div>
+      <div class="timeline__item">
+        <h3>Fire circle</h3>
+        <p>Sharing without judgment, listening without rush. Fire as a witness.</p>
+      </div>
+      <div class="timeline__item">
+        <h3>Conscious lunch and snack</h3>
+        <p>Local flavors prepared with intention. Eating is also an act of presence.</p>
+      </div>
+      <div class="timeline__item">
+        <h3>Sound journey and mindfulness closing</h3>
+        <p>Final integration to return to the world with deep calm and clarity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MEDICAL BLOCK ============ -->
+<section class="seccion" id="medical">
+  <div class="contenedor">
+    <div class="medico">
+      <h2>Your recovery, accompanied</h2>
+      <p>
+        Wellness and emotional support for international travelers undergoing
+        medical procedures in Cali, Colombia. We coordinate, we accompany, we care.
+      </p>
+
+      <div class="medico__pasos">
+        <div class="medico__paso">
+          <span aria-hidden="true">01</span>
+          <h3>Assessment</h3>
+          <p>We listen to your needs and design a personalized support plan.</p>
+        </div>
+        <div class="medico__paso">
+          <span aria-hidden="true">02</span>
+          <h3>Planning</h3>
+          <p>Transportation, recovery housing and logistics coordinated end to end.</p>
+        </div>
+        <div class="medico__paso">
+          <span aria-hidden="true">03</span>
+          <h3>Stay</h3>
+          <p>Emotional and energetic support during your recovery in Cali.</p>
+        </div>
+        <div class="medico__paso">
+          <span aria-hidden="true">04</span>
+          <h3>Follow-up</h3>
+          <p>Virtual check-ins after you return home.</p>
+        </div>
+      </div>
+
+      <div class="medico__aviso">
+        <strong>Important notice:</strong> our services are complementary
+        wellness and support services. They do not replace medical attention,
+        diagnosis or treatment. Always consult your treating physician.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="seccion seccion--suave" id="about">
+  <div class="contenedor">
+    <h2 class="centrado">About us</h2>
+    <p class="subtitulo centrado">
+      We create wellness and purpose tourism experiences.
+      We integrate ancestral wisdom, nature, spirituality and local culture.
+    </p>
+
+    <div class="sobre-grid">
+      <div class="sobre-bloque">
+        <div class="sobre-bloque__icono" aria-hidden="true">🌿</div>
+        <h3>Our mission</h3>
+        <p>To accompany people and travelers in processes of wellness, reconnection and recovery, offering authentic experiences in the heart of the Colombian Pacific.</p>
+      </div>
+
+      <div class="sobre-bloque">
+        <div class="sobre-bloque__icono" aria-hidden="true">🤝</div>
+        <h3>Our values</h3>
+        <p>Respect for nature, local communities and people. We work with transparency, warmth and commitment to the wellness of every visitor.</p>
+      </div>
+
+      <div class="sobre-bloque">
+        <div class="sobre-bloque__icono" aria-hidden="true">🌎</div>
+        <h3>Our commitment</h3>
+        <p>Regenerative tourism, support for local providers and absolute rejection of sexual exploitation of minors and sex tourism (Law 679 of 2001).</p>
+      </div>
+    </div>
+
+    <div class="sobre-cita">
+      <p>«We create wellness and purpose tourism experiences. We integrate ancestral wisdom, nature, spirituality and local culture.»</p>
+      <span>— Turismo es Vida SAS · RNT 265912</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="contact">
+  <div class="contenedor">
+
+    <div class="footer__aviso-ia">
+      <span aria-hidden="true">🤖</span>
+      <div>
+        <strong>Notice about this page's chat:</strong>
+        the virtual assistant below runs on <strong>artificial intelligence</strong>.
+        Its answers are indicative and may contain inaccuracies. To confirm
+        prices, dates, spots or medical conditions, write to us on WhatsApp or email.
+      </div>
+    </div>
+
+    <div class="footer__grid">
+      <div>
+        <h4>Turismo es Vida SAS</h4>
+        <p class="footer__desc">
+          Wellness and health tourism in Cali, Colombia.<br>
+          RNT 265912 · Cali, Valle del Cauca.
+        </p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="#retreat">Retreat Come back to you</a>
+        <a href="#medical">Medical Companion</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#about">About us</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="https://wa.me/573183981089" rel="noopener">WhatsApp +57 318 398 1089</a>
+        <a href="mailto:turismoesvida@gmail.com">turismoesvida@gmail.com</a>
+        <a href="https://www.turismoesvida.com">www.turismoesvida.com</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="/en/privacy">Privacy policy</a>
+        <a href="/en/data-policy">Data treatment</a>
+        <a href="/en/terms">Terms of service</a>
+        <a href="/en/cancellations">Cancellations</a>
+        <a href="/en/risks">Risk notice</a>
+        <a href="/en/consent">Informed consent</a>
+        <a href="/en/medical-notice">Medical notice</a>
+      </div>
+    </div>
+
+    <div class="footer__legal">
+      <span>© 2026 Turismo es Vida SAS. All rights reserved.</span>
+      <span>We reject sexual exploitation of minors and sex tourism (Law 679/2001).</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ MAIN SCRIPT ============ -->
+<script src="/assets/js/main.js" defer></script>
+
+<!-- ============ AI AGENT WIDGET ============ -->
+<script>
+  window.TURISMOESVIDA_API = 'https://turismo-es-vida-agente.arnaldoeuropa66.workers.dev';
+</script>
+<script src="https://turismo-es-vida-agente.arnaldoeuropa66.workers.dev/widget.js" defer></script>
+
+</body>
+</html>
