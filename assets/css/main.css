@@ -795,3 +795,208 @@ body.menu-abierto{
     transition: none;
   }
 }
+/* ============================================================
+   HERO ANIMADO (letras escalonadas)
+   ============================================================ */
+
+/* Estado inicial: cada línea invisible y desplazada */
+.hero__eyebrow,
+.hero__titulo,
+.hero__subtitulo,
+.hero__acciones {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.hero__logo {
+  opacity: 0;
+  transform: translateY(16px) scale(0.95);
+  transition: opacity 1s ease, transform 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Cuando el hero se carga, entra todo escalonado */
+.hero.cargado .hero__logo {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 0.2s;
+}
+
+.hero.cargado .hero__eyebrow {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+.hero.cargado .hero__titulo {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.7s;
+}
+
+.hero.cargado .hero__subtitulo {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.95s;
+}
+
+.hero.cargado .hero__acciones {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.15s;
+}
+
+/* Respeta prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero__logo,
+  .hero__eyebrow,
+  .hero__titulo,
+  .hero__subtitulo,
+  .hero__acciones {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+/* ============================================================
+   SOBRE NOSOTROS
+   ============================================================ */
+
+.sobre-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 56px;
+}
+
+.sobre-bloque {
+  background: #fff;
+  border-radius: var(--radio-lg);
+  padding: 32px 28px;
+  box-shadow: 0 10px 30px rgba(31,61,43,.06);
+  border-top: 4px solid var(--verde-hoja);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sobre-bloque:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(31,61,43,.12);
+}
+
+.sobre-bloque__icono {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.sobre-bloque h3 {
+  font-family: var(--serif);
+  color: var(--verde-selva);
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.sobre-bloque p {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.sobre-cita {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  border-top: 2px solid rgba(31,61,43,.1);
+  border-bottom: 2px solid rgba(31,61,43,.1);
+}
+
+.sobre-cita p {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--verde-selva);
+  font-style: italic;
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+.sobre-cita span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .sobre-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sobre-bloque {
+    transition: none;
+  }
+}
+/* ============================================================
+   HERO ANIMADO (letras escalonadas)
+   ============================================================ */
+
+.hero__eyebrow,
+.hero__titulo,
+.hero__subtitulo,
+.hero__acciones {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.hero__logo {
+  opacity: 0;
+  transform: translateY(16px) scale(0.95);
+  transition: opacity 1s ease, transform 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.hero.cargado .hero__logo {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 0.2s;
+}
+
+.hero.cargado .hero__eyebrow {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+.hero.cargado .hero__titulo {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.7s;
+}
+
+.hero.cargado .hero__subtitulo {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.95s;
+}
+
+.hero.cargado .hero__acciones {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.15s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__logo,
+  .hero__eyebrow,
+  .hero__titulo,
+  .hero__subtitulo,
+  .hero__acciones {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

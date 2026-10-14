@@ -8,6 +8,33 @@
 (function(){
   'use strict';
 
+  /* ============================================================
+     HERO ANIMADO AL CARGAR
+     ============================================================ */
+
+  const heroAnimado = document.querySelector('.hero');
+  if (heroAnimado) {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        heroAnimado.classList.add('cargado');
+      });
+    });
+  }
+    /* ============================================================
+     9. HERO ANIMADO AL CARGAR
+     ============================================================ */
+
+  const hero = document.querySelector('.hero');
+  if (hero) {
+    // Activar la animación cuando el DOM esté listo
+    // Usamos requestAnimationFrame para asegurar que el navegador pinte el estado inicial primero
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        hero.classList.add('cargado');
+      });
+    });
+  }
+
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const esMovil = window.matchMedia('(max-width: 900px)').matches;
 
