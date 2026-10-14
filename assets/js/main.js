@@ -15,43 +15,13 @@
      1. REEL 3D DE EXPERIENCIAS
      ============================================================ */
   const experiencias = [
-    {
-      titulo: "Retiro Vuelve a ti",
-      tag: "Holístico",
-      img: "/assets/img/retiro.jpg",
-      alt: "Retiro holístico en reserva natural"
-    },
-    {
-      titulo: "City Tour Sabores",
-      tag: "Cultura",
-      img: "/assets/img/sabores.jpg",
-      alt: "Tour gastronómico por Cali"
-    },
-    {
-      titulo: "Laguna de Sonso",
-      tag: "Naturaleza",
-      img: "/assets/img/laguna.jpg",
-      alt: "Kayak y avistamiento en la Laguna de Sonso"
-    },
-    {
-      titulo: "Tour de Salsa",
-      tag: "Música",
-      img: "/assets/img/salsa.jpg",
-      alt: "Clase de salsa caleña"
-    },
-    {
-      titulo: "Bosque de Niebla",
-      tag: "Naturaleza",
-      img: "/assets/img/bosque.jpg",
-      alt: "Caminata en el Bosque de Niebla Km 18"
-    },
-    {
-      titulo: "Celebraciones",
-      tag: "Especiales",
-      img: "/assets/img/celebraciones.jpg",
-      alt: "Celebración personalizada"
-    }
-  ];
+  { titulo: "Retiro Vuelve a ti", tag: "Holístico",    img: "/assets/img/retiro.webp",       alt: "Retiro holístico en reserva natural" },
+  { titulo: "City Tour Sabores",  tag: "Cultura",      img: "/assets/img/sabores.webp",      alt: "Tour gastronómico por Cali" },
+  { titulo: "Laguna de Sonso",    tag: "Naturaleza",   img: "/assets/img/laguna.webp",       alt: "Kayak y avistamiento en la Laguna de Sonso" },
+  { titulo: "Tour de Salsa",      tag: "Música",       img: "/assets/img/salsa.webp",        alt: "Clase de salsa caleña" },
+  { titulo: "Bosque de Niebla",   tag: "Naturaleza",   img: "/assets/img/bosque.webp",       alt: "Caminata en el Bosque de Niebla Km 18" },
+  { titulo: "Celebraciones",      tag: "Especiales",   img: "/assets/img/celebraciones.webp",alt: "Celebración personalizada" }
+];
 
   const carrusel = document.getElementById('reelCarrusel');
   if (carrusel) {

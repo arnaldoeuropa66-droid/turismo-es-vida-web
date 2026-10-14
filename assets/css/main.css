@@ -414,3 +414,37 @@ h3{font-size:1.25rem;margin-bottom:.4em}
   .hero__capa{transform:none !important}
   .hero__contenido{transform:none !important}
 }
+/* ============================================================
+   LOGO
+   ============================================================ */
+
+.header__logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.hero__logo {
+  height: 110px;
+  width: auto;
+  margin: 0 auto 24px;
+  display: block;
+  filter: drop-shadow(0 6px 18px rgba(31,61,43,.18));
+}
+
+.legal__logo {
+  margin: 60px auto 24px;
+  text-align: center;
+}
+
+.legal__logo img {
+  height: 70px;
+  width: auto;
+  opacity: 0.9;
+}
+
+@media (max-width: 520px) {
+  .header__logo-img { height: 38px; }
+  .hero__logo { height: 80px; }
+  .legal__logo img { height: 56px; }
+}
