@@ -448,3 +448,132 @@ h3{font-size:1.25rem;margin-bottom:.4em}
   .hero__logo { height: 100px; }
   .legal__logo img { height: 56px; }
 }
+/* ============================================================
+   ANIMACIONES DE ENTRADA AL SCROLL
+   ============================================================ */
+
+/* Estado inicial: invisible y ligeramente desplazado hacia abajo */
+.animar {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+  will-change: opacity, transform;
+}
+
+/* Estado final: visible y en su sitio */
+.animar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variantes de delay para efecto escalonado */
+.animar--delay-1 { transition-delay: 0.1s; }
+.animar--delay-2 { transition-delay: 0.2s; }
+.animar--delay-3 { transition-delay: 0.3s; }
+.animar--delay-4 { transition-delay: 0.4s; }
+
+/* ============================================================
+   BOTÓN VOLVER ARRIBA
+   ============================================================ */
+
+.volver-arriba {
+  position: fixed;
+  right: 24px;
+  bottom: 100px; /* Encima del widget del agente */
+  z-index: 90;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--verde-selva);
+  color: var(--crema);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(31,61,43,.25);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease;
+}
+
+.volver-arriba.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.volver-arriba:hover {
+  background: var(--naranja-cta);
+  transform: translateY(-3px);
+}
+
+.volver-arriba:focus-visible {
+  outline: 2px solid var(--naranja-cta);
+  outline-offset: 3px;
+}
+
+@media (max-width: 520px) {
+  .volver-arriba {
+    right: 16px;
+    bottom: 90px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* ============================================================
+   MICRO-INTERACCIONES
+   ============================================================ */
+
+/* Enlaces del footer: subrayado animado al hover */
+.footer a {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+/* Botones primarios: ya tienen hover, añadimos pulso al focus */
+.btn:focus-visible {
+  outline: 2px solid var(--naranja-cta);
+  outline-offset: 3px;
+}
+
+/* Tarjetas de puertas: efecto de elevación más acusado */
+.puerta {
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+              box-shadow 0.3s ease;
+}
+
+.puerta:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 24px 60px rgba(31,61,43,.18);
+}
+
+/* Timeline: punto que pulsa al entrar */
+.timeline__item::before {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline__item:hover::before {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 4px var(--verde-hoja);
+}
+
+/* ============================================================
+   RESPETO A PREFERS-REDUCED-MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .animar {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .volver-arriba {
+    transition: none;
+  }
+  .puerta {
+    transition: none;
+  }
+}

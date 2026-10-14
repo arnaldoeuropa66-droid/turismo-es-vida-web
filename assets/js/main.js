@@ -123,5 +123,82 @@
       }
     });
   }
+  /* ============================================================
+     4. ANIMACIONES AL SCROLL (IntersectionObserver)
+     ============================================================ */
 
+  // Elementos que queremos animar
+  const elementosAnimar = [
+    '.puertas .puerta',
+    '.reel__titulo',
+    '.reel__sub',
+    '.timeline__item',
+    '.medico__paso',
+    '.seccion h2',
+    '.subtitulo'
+  ];
+
+  // Añadir la clase .animar a todos los elementos
+  elementosAnimar.forEach(selector => {
+    document.querySelectorAll(selector).forEach((el, i) => {
+      el.classList.add('animar');
+      // Delay escalonado: los primeros 4 elementos de cada grupo tienen delay
+      if (i < 4) el.classList.add('animar--delay-' + (i + 1));
+    });
+  });
+
+  // IntersectionObserver
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          // Dejar de observar una vez animado
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    document.querySelectorAll('.animar').forEach(el => observer.observe(el));
+  } else {
+    // Fallback: si no hay soporte, mostrar todo
+    document.querySelectorAll('.animar').forEach(el => el.classList.add('visible'));
+  }
+
+  /* ============================================================
+     5. BOTÓN VOLVER ARRIBA
+     ============================================================ */
+
+  const btnVolverArriba = document.createElement('button');
+  btnVolverArriba.className = 'volver-arriba';
+  btnVolverArriba.setAttribute('aria-label', 'Volver arriba');
+  btnVolverArriba.innerHTML =
+    '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">' +
+      '<path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" ' +
+        'stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '</svg>';
+  document.body.appendChild(btnVolverArriba);
+
+  // Mostrar/ocultar según el scroll
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      if (window.scrollY > 600) {
+        btnVolverArriba.classList.add('visible');
+      } else {
+        btnVolverArriba.classList.remove('visible');
+      }
+      ticking = false;
+    });
+  }, { passive: true });
+
+  // Click: scroll suave al inicio
+  btnVolverArriba.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 })();
