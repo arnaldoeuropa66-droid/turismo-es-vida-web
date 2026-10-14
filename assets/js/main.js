@@ -128,15 +128,14 @@
      ============================================================ */
 
   // Elementos que queremos animar
-  const elementosAnimar = [
-    '.puertas .puerta',
-    '.reel__titulo',
-    '.reel__sub',
-    '.timeline__item',
-    '.medico__paso',
-    '.seccion h2',
-    '.subtitulo'
-  ];
+ const elementosAnimar = [
+  '.reel__titulo',
+  '.reel__sub',
+  '.timeline__item',
+  '.medico__paso',
+  '.seccion h2',
+  '.subtitulo'
+];
 
   // Añadir la clase .animar a todos los elementos
   elementosAnimar.forEach(selector => {
@@ -201,4 +200,25 @@
   btnVolverArriba.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+    /* ============================================================
+     6. ANIMACIÓN DE LAS TRES PUERTAS (convergencia)
+     ============================================================ */
+
+  const puertas = document.querySelector('.puertas.animar-puertas');
+  if (puertas && 'IntersectionObserver' in window) {
+    const observerPuertas = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observerPuertas.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.25,
+      rootMargin: '0px 0px -80px 0px'
+    });
+    observerPuertas.observe(puertas);
+  } else if (puertas) {
+    puertas.classList.add('visible');
+  }
 })();

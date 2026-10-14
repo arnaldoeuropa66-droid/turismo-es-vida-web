@@ -577,3 +577,54 @@ h3{font-size:1.25rem;margin-bottom:.4em}
     transition: none;
   }
 }
+/* ============================================================
+   ANIMACIÓN DE LAS TRES PUERTAS (convergencia al centro)
+   ============================================================ */
+
+/* Estado inicial: cada puerta desplazada según su posición */
+.puertas.animar-puertas .puerta--izq {
+  opacity: 0;
+  transform: translateX(-120px);
+  transition: opacity 1.6s ease, transform 1.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.puertas.animar-puertas .puerta--centro {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease 0.4s, transform 1.2s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s;
+}
+
+.puertas.animar-puertas .puerta--der {
+  opacity: 0;
+  transform: translateX(120px);
+  transition: opacity 1.6s ease, transform 1.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Estado final: todas visibles y en su sitio */
+.puertas.animar-puertas.visible .puerta--izq,
+.puertas.animar-puertas.visible .puerta--centro,
+.puertas.animar-puertas.visible .puerta--der {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* En móvil, movimiento más sutil (menos desplazamiento) */
+@media (max-width: 900px) {
+  .puertas.animar-puertas .puerta--izq {
+    transform: translateX(-60px);
+  }
+  .puertas.animar-puertas .puerta--der {
+    transform: translateX(60px);
+  }
+}
+
+/* Respeto a prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .puertas.animar-puertas .puerta--izq,
+  .puertas.animar-puertas .puerta--centro,
+  .puertas.animar-puertas .puerta--der {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
