@@ -9,7 +9,7 @@ binding = "IA"
 
 # Variables de entorno del Worker
 [vars]
-MODELO = "@cf/meta/llama-3.1-8b-instruct-awq"
+MODELO = "@cf/meta/llama-3.1-8b-instruct-fp8"
 
 # Limite de peticiones por IP (Workers KV)
 [[kv_namespaces]]

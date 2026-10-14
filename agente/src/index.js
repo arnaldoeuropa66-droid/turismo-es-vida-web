@@ -82,8 +82,7 @@ function modeloConfig(env) {
   const fromEnv = env.MODELO && String(env.MODELO).trim().length > 0
     ? String(env.MODELO).trim()
     : DEFAULT_MODEL;
-  const binding = env.IA;
-  return { binding, fromEnv };
+  return { fromEnv };
 }
 const SYSTEM = `Eres el asistente virtual de Turismo es Vida SAS, una empresa de turismo de bienestar y salud con sede en Cali, Valle del Cauca, Colombia. Lema: "Vive tu mejor versión". RNT 265912.
 
@@ -161,8 +160,8 @@ export default {
         return json({ error: 'No hay mensaje.' }, 400);
       }
 
-      const { binding, fromEnv } = modeloConfig(env);
-      const model = binding || fromEnv;
+      const { fromEnv } = modeloConfig(env);
+      const model = fromEnv;
 
       try {
         const result = await env.IA.run(model, {
