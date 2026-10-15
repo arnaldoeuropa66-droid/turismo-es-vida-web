@@ -50,3 +50,6 @@ assets/img/*.psd
 assets/img/*.ai
 assets/img/*.tiff
 assets/img/*.raw
+
+# Backup CSS
+*.bak-*
