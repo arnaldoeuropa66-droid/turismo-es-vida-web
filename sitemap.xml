@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://turismo-es-vida-web.pages.dev/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismo-es-vida-web.pages.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismo-es-vida-web.pages.dev/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismo-es-vida-web.pages.dev/"/>
+  </url>
+
+  <url>
+    <loc>https://turismo-es-vida-web.pages.dev/en/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismo-es-vida-web.pages.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismo-es-vida-web.pages.dev/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismo-es-vida-web.pages.dev/"/>
+  </url>
+
+  <url>
+    <loc>https://turismo-es-vida-web.pages.dev/faq</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismo-es-vida-web.pages.dev/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismo-es-vida-web.pages.dev/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismo-es-vida-web.pages.dev/faq"/>
+  </url>
+
+  <url>
+    <loc>https://turismo-es-vida-web.pages.dev/en/faq</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismo-es-vida-web.pages.dev/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismo-es-vida-web.pages.dev/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismo-es-vida-web.pages.dev/faq"/>
+  </url>
+
+  <url><loc>https://turismo-es-vida-web.pages.dev/privacidad</loc><lastmod>2026-10-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://turismo-es-vida-web.pages.dev/terminos</loc><lastmod>2026-10-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://turismo-es-vida-web.pages.dev/cancelaciones</loc><lastmod>2026-10-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://turismo-es-vida-web.pages.dev/riesgos</loc><lastmod>2026-10-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://turismo-es-vida-web.pages.dev/consentimiento</loc><lastmod>2026-10-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://turismo-es-vida-web.pages.dev/aviso-medico</loc><lastmod>2026-10-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://turismo-es-vida-web.pages.dev/politica-datos</loc><lastmod>2026-10-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+  <url><loc>https://turismo-es-vida-web.pages.dev/en/privacy</loc><lastmod>2026-10-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://turismo-es-vida-web.pages.dev/en/terms</loc><lastmod>2026-10-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://turismo-es-vida-web.pages.dev/en/cancellations</loc><lastmod>2026-10-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://turismo-es-vida-web.pages.dev/en/risks</loc><lastmod>2026-10-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://turismo-es-vida-web.pages.dev/en/consent</loc><lastmod>2026-10-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://turismo-es-vida-web.pages.dev/en/medical-notice</loc><lastmod>2026-10-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://turismo-es-vida-web.pages.dev/en/data-policy</loc><lastmod>2026-10-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+</urlset>

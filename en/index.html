@@ -1,5 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Structured data: LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Turismo es Vida SAS",
+  "alternateName": "Almas Libres yo soy",
+  "description": "Wellness and health tourism in Cali, Colombia. Holistic retreats, medical companion, cultural tours and authentic experiences.",
+  "url": "https://turismo-es-vida-web.pages.dev/en/",
+  "logo": "https://turismo-es-vida-web.pages.dev/assets/img/logo.webp",
+  "image": "https://turismo-es-vida-web.pages.dev/assets/img/logo.webp",
+  "telephone": "+57 318 398 1089",
+  "email": "turismoesvida@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cali",
+    "addressRegion": "Valle del Cauca",
+    "addressCountry": "CO"
+  },
+  "areaServed": { "@type": "Country", "name": "Colombia" },
+  "priceRange": "$$",
+  "knowsLanguage": ["es", "en"],
+  "slogan": "Live your best version"
+}
+</script>
+
+<!-- Structured data: TouristTrip -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristTrip",
+  "name": "Come back to you retreat",
+  "description": "6-hour holistic retreat in a nature reserve near Cali. Includes purification with herb smoke, steam baths, Tibetan bowls, walking meditation, tree of life ritual, fire circle, lunch and mindfulness closing.",
+  "image": "https://turismo-es-vida-web.pages.dev/assets/img/retiro.webp",
+  "touristType": "People seeking wellness, reconnection and calm",
+  "provider": { "@type": "TravelAgency", "name": "Turismo es Vida SAS", "url": "https://turismo-es-vida-web.pages.dev/en/" },
+  "offers": { "@type": "Offer", "availability": "https://schema.org/LimitedAvailability", "url": "https://turismo-es-vida-web.pages.dev/en/#retreat" }
+}
+</script>
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,6 +52,19 @@
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:locale:alternate" content="es_CO" />
+<meta property="og:url" content="https://turismo-es-vida-web.pages.dev/en/" />
+<meta property="og:site_name" content="Turismo es Vida SAS" />
+<meta property="og:image" content="https://turismo-es-vida-web.pages.dev/assets/img/logo.webp" />
+<meta property="og:image:alt" content="Turismo es Vida SAS — Holistic retreats in Cali, Colombia" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Turismo es Vida SAS — Live your best version" />
+<meta name="twitter:description" content="Holistic retreats, wellness tourism and authentic experiences in Cali, Colombia." />
+<meta name="twitter:image" content="https://turismo-es-vida-web.pages.dev/assets/img/logo.webp" />
+
+<!-- Canonical -->
+<link rel="canonical" href="https://turismo-es-vida-web.pages.dev/en/" />
 
 <!-- hreflang -->
 <link rel="alternate" hreflang="es" href="https://turismo-es-vida-web.pages.dev/" />

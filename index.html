@@ -1,5 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
+  <!-- Datos estructurados: LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Turismo es Vida SAS",
+  "alternateName": "Almas Libres yo soy",
+  "description": "Turismo de bienestar y salud en Cali, Colombia. Retiros holísticos, acompañamiento a pacientes médicos, tours culturales y experiencias auténticas.",
+  "url": "https://turismo-es-vida-web.pages.dev/",
+  "logo": "https://turismo-es-vida-web.pages.dev/assets/img/logo.webp",
+  "image": "https://turismo-es-vida-web.pages.dev/assets/img/logo.webp",
+  "telephone": "+57 318 398 1089",
+  "email": "turismoesvida@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cali",
+    "addressRegion": "Valle del Cauca",
+    "addressCountry": "CO"
+  },
+  "areaServed": { "@type": "Country", "name": "Colombia" },
+  "priceRange": "$$",
+  "knowsLanguage": ["es", "en"],
+  "slogan": "Vive tu mejor versión"
+}
+</script>
+
+<!-- Datos estructurados: TouristTrip -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristTrip",
+  "name": "Retiro Vuelve a ti",
+  "description": "Retiro holístico de 6 horas en una reserva natural cerca de Cali. Incluye purificación con humo de hierbas, baños de vapor, cuencos tibetanos, meditación caminando, ritual del árbol de la vida, círculo de fuego, almuerzo y cierre mindfulness.",
+  "image": "https://turismo-es-vida-web.pages.dev/assets/img/retiro.webp",
+  "touristType": "Personas que buscan bienestar, reconexión y calma",
+  "provider": { "@type": "TravelAgency", "name": "Turismo es Vida SAS", "url": "https://turismo-es-vida-web.pages.dev/" },
+  "offers": { "@type": "Offer", "availability": "https://schema.org/LimitedAvailability", "url": "https://turismo-es-vida-web.pages.dev/#retiro" }
+}
+</script>
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +51,20 @@
 <meta property="og:description" content="Retiros holísticos, turismo de bienestar y experiencias auténticas en Cali, Colombia." />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="es_CO" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:url" content="https://turismo-es-vida-web.pages.dev/" />
+<meta property="og:site_name" content="Turismo es Vida SAS" />
+<meta property="og:image" content="https://turismo-es-vida-web.pages.dev/assets/img/logo.webp" />
+<meta property="og:image:alt" content="Turismo es Vida SAS — Retiros holísticos en Cali, Colombia" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Turismo es Vida SAS — Vive tu mejor versión" />
+<meta name="twitter:description" content="Retiros holísticos, turismo de bienestar y experiencias auténticas en Cali, Colombia." />
+<meta name="twitter:image" content="https://turismo-es-vida-web.pages.dev/assets/img/logo.webp" />
+
+<!-- Canonical -->
+<link rel="canonical" href="https://turismo-es-vida-web.pages.dev/" />
 
 <!-- hreflang -->
 <link rel="alternate" hreflang="es" href="https://turismoesvida.com/" />

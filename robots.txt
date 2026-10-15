@@ -1,0 +1,12 @@
+# Turismo es Vida SAS - robots.txt
+
+User-agent: *
+Allow: /
+
+# Bloquear acceso a archivos internos
+Disallow: /agente/
+Disallow: /_redirects
+Disallow: /.wrangler/
+
+# Sitemap
+Sitemap: https://turismo-es-vida-web.pages.dev/sitemap.xml
