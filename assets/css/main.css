@@ -20,7 +20,7 @@
   --sans:  "Inter", system-ui, -apple-system, sans-serif;
 
   --radio: 14px;
-  --radio-lg: 24px;
+  --radio-lg: 32px;
   --sombra: 0 10px 30px rgba(31,61,43,.08);
   --sombra-fuerte: 0 20px 50px rgba(31,61,43,.18);
   --max: 1180px;
@@ -1475,5 +1475,30 @@ body.menu-abierto{
   .sello {
     padding: 8px 14px;
     font-size: 0.78rem;
+  }
+}
+
+/* ============================================================
+   PULSO DEL BOTÓN DEL AGENTE IA
+   ============================================================ */
+
+.eb-agent__fab {
+  animation: pulso-agente 2.5s ease-in-out infinite;
+}
+
+@keyframes pulso-agente {
+  0%, 100% {
+    box-shadow: 0 10px 30px rgba(229, 138, 53, 0.4),
+                0 0 0 0 rgba(229, 138, 53, 0.5);
+  }
+  50% {
+    box-shadow: 0 10px 30px rgba(229, 138, 53, 0.4),
+                0 0 0 16px rgba(229, 138, 53, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eb-agent__fab {
+    animation: none;
   }
 }
