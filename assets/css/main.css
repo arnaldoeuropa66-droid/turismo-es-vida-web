@@ -1388,3 +1388,31 @@ body.menu-abierto{
     );
   }
 }
+
+/* ============================================================
+   DIVISORES CURVOS ENTRE SECCIONES
+   ============================================================ */
+
+.divisor {
+  display: block;
+  width: 100%;
+  line-height: 0;
+  position: relative;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.divisor svg {
+  display: block;
+  width: 100%;
+  height: clamp(50px, 7vw, 100px);
+}
+
+/* Divisor pequeño para móvil */
+@media (max-width: 520px) {
+  .divisor svg {
+    height: 50px;
+  }
+}
