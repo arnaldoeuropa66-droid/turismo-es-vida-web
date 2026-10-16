@@ -8,26 +8,13 @@
 (function(){
   'use strict';
 
-  /* ============================================================
+   /* ============================================================
      HERO ANIMADO AL CARGAR
-     ============================================================ */
-
-  const heroAnimado = document.querySelector('.hero');
-  if (heroAnimado) {
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        heroAnimado.classList.add('cargado');
-      });
-    });
-  }
-    /* ============================================================
-     9. HERO ANIMADO AL CARGAR
      ============================================================ */
 
   const hero = document.querySelector('.hero');
   if (hero) {
-    // Activar la animación cuando el DOM esté listo
-    // Usamos requestAnimationFrame para asegurar que el navegador pinte el estado inicial primero
+    hero.classList.add('animar-hero');
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         hero.classList.add('cargado');
@@ -144,6 +131,12 @@
     }
 
     function abrirMenu() {
+  // Calcular el ancho de la barra de scroll
+  const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+  document.documentElement.style.setProperty('--scrollbar-width', scrollbarWidth + 'px');
+
+  // ...resto del código
+
       nav.classList.add('abierto');
       burger.classList.add('abierto');
       burger.setAttribute('aria-expanded', 'true');
@@ -152,6 +145,8 @@
     }
 
     function cerrarMenu() {
+  document.documentElement.style.removeProperty('--scrollbar-width');
+  // ...resto del código
       nav.classList.remove('abierto');
       burger.classList.remove('abierto');
       burger.setAttribute('aria-expanded', 'false');

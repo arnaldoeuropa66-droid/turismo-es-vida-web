@@ -116,7 +116,8 @@ h3{font-size:1.25rem;margin-bottom:.4em}
     right:-100%;
     width:80%;
     max-width:340px;
-    height:100vh;
+    height:100vh;   /* fallback */
+    height:100svh;  /* small viewport height */
     background:var(--crema);
     flex-direction:column;
     align-items:flex-start;
@@ -206,8 +207,9 @@ h3{font-size:1.25rem;margin-bottom:.4em}
   pointer-events:auto;
 }
 
-body.menu-abierto{
-  overflow:hidden;
+body.menu-abierto {
+  overflow: hidden;
+  padding-right: var(--scrollbar-width, 0);
 }
 
 @media(min-width:901px){
@@ -226,6 +228,7 @@ body.menu-abierto{
 .hero{
   position:relative;
   min-height:100vh;
+  min-height:100svh;
   display:flex;align-items:center;justify-content:center;
   overflow:hidden;
   background:linear-gradient(180deg,#DCE9D2 0%, #EAF0E4 45%, #FFF8EC 100%);
@@ -1300,6 +1303,7 @@ body.menu-abierto{
 .hero {
   position: relative;
   min-height: 100vh;
+  min-height: 100svh;
   overflow: hidden;
   background: var(--crema);
   padding: 120px 0 40px;
@@ -1500,5 +1504,42 @@ body.menu-abierto{
 @media (prefers-reduced-motion: reduce) {
   .eb-agent__fab {
     animation: none;
+  }
+}
+/* ============================================================
+   FIX: HERO EN MÓVIL (quitar panel crema, texto legible)
+   ============================================================ */
+
+@media (max-width: 900px) {
+  /* El contenido del hero sin panel crema */
+  .hero__contenido {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    padding: 0 24px !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  /* El título legible sobre la niebla */
+  .hero__titulo {
+    color: var(--verde-selva) !important;
+    text-shadow: 0 2px 8px rgba(255, 248, 236, 0.9), 0 1px 2px rgba(255, 248, 236, 1) !important;
+  }
+
+  .hero__subtitulo {
+    color: var(--texto) !important;
+    text-shadow: 0 1px 4px rgba(255, 248, 236, 0.9) !important;
+  }
+
+  .hero__eyebrow {
+    background: rgba(168, 198, 108, 0.5) !important;
+    color: var(--verde-selva) !important;
+  }
+
+  /* El logo con sombra ligera */
+  .hero__logo {
+    filter: drop-shadow(0 2px 6px rgba(255, 248, 236, 0.8)) !important;
   }
 }
