@@ -1416,3 +1416,11 @@ body.menu-abierto{
     height: 50px;
   }
 }
+
+/* ============================================================
+   FILTRO UNIFORME PARA IMÁGENES DEL REEL
+   ============================================================ */
+
+.reel__tarjeta img {
+  filter: saturate(0.95) brightness(1.05) contrast(1.02);
+}
